@@ -20,3 +20,4 @@ tmp/
 .mozilla/
 .git-credentials
 .calc_history
+.config/rofi/launcher/colors.rasi
