@@ -49,8 +49,8 @@ super + c
 #
 
 # Change keyboard language
-super + space
-	{setxkbmap ir, setxkbmap us}
+# super + space
+# 	{setxkbmap ir, setxkbmap us}
 
 # quit/restart bspwm
 super + alt + {q,r}
