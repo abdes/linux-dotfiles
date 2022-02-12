@@ -71,3 +71,8 @@ ProfileBaseXdgExt() {
         XDG_BIN_HOME \
         XDG_LOCAL_DIR
 }
+
+ProfileBasePath() {
+    PATH=$XDG_BIN_HOME:$PATH
+    export PATH
+}

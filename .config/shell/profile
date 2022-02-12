@@ -24,6 +24,7 @@ source "${_THIS_SCRIPT_DIR}/profile.d/base.sh"
 \ProfileBaseTz
 \ProfileBaseXdg
 \ProfileBaseXdgExt
+\ProfileBasePath
 
 source "${_THIS_SCRIPT_DIR}/profile.d/ext.sh"
 \ProfileExtGlib
