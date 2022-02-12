@@ -115,6 +115,7 @@ source $ZSH/oh-my-zsh.sh
 alias vi=vim
 # https://www.atlassian.com/git/tutorials/dotfiles
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias dote=GIT_WORK_TREE=~ GIT_DIR=.dotfiles code ~
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
