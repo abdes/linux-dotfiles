@@ -12,10 +12,10 @@ super + w
 
 # power menu
 super + p
-	~/.config/polybar/forest/scripts/powermenu.sh &
+	powermenu
 # program launcher
 super + r
-	~/.config/polybar/forest/scripts/launcher.sh &
+	~/.config/rofi/launcher/launcher.sh &
 
 # dmenu run
 super + d

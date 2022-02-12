@@ -1,0 +1,4 @@
+#!/bin/sh
+rofi -show power-menu \
+    -modi power-menu:~/.config/rofi/powermenu/powermenu.sh \
+    --theme row-rounded &
