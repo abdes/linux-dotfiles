@@ -1,0 +1,5 @@
+#!/bin/sh
+#
+# Command to be started for X11 session of any type (display manager or xinit)
+
+/usr/bin/vmware-user
