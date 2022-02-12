@@ -1,0 +1,34 @@
+#!/bin/sh
+#
+# $HOME/.zprofile
+#
+# Order of Operations: .zshenv -> .zprofile -> .zsh -> .zlogin -> .zlogout
+#
+# Similarly to `.zlogin`, this file is soued on the start of a login shell but
+#  before .zsh if the shell is also interactive. Since this is inspired by how
+#  `bash` uses `.bash_profile`, I use it to put the common environment settings
+#  that would work for any shell. The actual settings are in a shell neutral
+echo ".zprofile"
+{
+    ulimit -n "$(($(ulimit -n) * 8))"
+    ulimit -s "$(($(ulimit -s) * 8))"
+    ulimit -c 0
+} 2>/dev/null
+
+export X_DPI=192
+
+_THIS_SCRIPT_DIR=${0:a:h}
+source "${_THIS_SCRIPT_DIR}/profile.d/base.sh"
+\ProfileBaseAlias
+\ProfileBaseLocale
+\ProfileBaseTz
+\ProfileBaseXdg
+\ProfileBaseXdgExt
+
+source "${_THIS_SCRIPT_DIR}/profile.d/ext.sh"
+\ProfileExtGlib
+\ProfileExtGtk
+\ProfileExtJava
+\ProfileExtLess
+\ProfileExtMan
+\ProfileExtQt

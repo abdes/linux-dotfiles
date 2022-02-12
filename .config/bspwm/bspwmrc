@@ -1,10 +1,10 @@
 #! /bin/sh
-export GDK_SCALE=2
-export GDK_DPI_SCALE=0.6
+#export GDK_SCALE=2
+#export GDK_DPI_SCALE=0.6
 
 #xrandr --output Virtual1 --mode 3840x2160
 
-pgrep -x sxhkd > /dev/null || sxhkd &
+pgrep -x sxhkd >/dev/null || sxhkd &
 
 bspc monitor -d I II III IV V
 
@@ -12,12 +12,12 @@ bash ~/.config/polybar/launch.sh --forest &
 
 feh --bg-fill -z .walls/ &
 
-bspc config border_width         2
-bspc config window_gap          12
+bspc config border_width 2
+bspc config window_gap 12
 
-bspc config split_ratio          0.52
-bspc config borderless_monocle   true
-bspc config gapless_monocle      true
+bspc config split_ratio 0.52
+bspc config borderless_monocle true
+bspc config gapless_monocle true
 bspc config external_rules_command ~/.config/bspwm/external_rules
 
 bspc rule -a Gimp desktop='^8' state=floating follow=on

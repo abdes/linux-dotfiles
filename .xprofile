@@ -1,1 +1,44 @@
+#/bin/sh
+#
+# Set the resolution and the DPI for the monitor so that it works for HiDPI
+# monitors.
+#
+# The correct behavior of this script depends on proper settings of the monitor
+#  in the X11 config. For this to happen, a couple of things need to be done:
+#
+#   1- Manually configure the monitor in the X11 config.
+#      https://wiki.archlinux.org/title/xorg#Monitor_settings
+#
+#        Section "Monitor"
+#                Identifier "Virtual1"
+#                Modeline "3840x2160_60.00" 712.34 3840 4152 4576 5312 2160 2161 2164 2235 -HSync +Vsync
+#                Option "PreferredMode" "3840x2160_60.00"
+#                DisplaySize 597 336 # In millimeters
+#        EndSection
+#
+#      Modeline can be obtained by using an online calculator (Google). Exact
+#       display dimensions can be obtained either from the manufacturer specs or
+#       by calculating it based on the diagonal size.
+#
+#   2- Get the real DPI from `xdpyinfo grep -B2 resolution
+#
+#       screen #0:
+#        dimensions:    3840x2160 pixels (598x336 millimeters)
+#        resolution:    163x163 dots per inch
+#
+#   3- Set the dpi in the X server command line at the display manager, e.g. for
+#      `sddm`, we add the '-dpi 163' to 'ServerArguments' in /etc/sddm/sddm.conf
+#
+# From there on, we make sure everything is perfect with the following xrandr
+#  commands, and we handle HiDPI settings appropriately for each application in
+#  the profile scripts.
+#
+# X_DPI will now hold the correct real DPI for this display.
+
+X_DPI=$(xdpyinfo | grep dots | awk -F ' ' '{print $2}' | awk -F 'x' '{print $1}')
+export X_DPI
+
+echo ".xprofile"
 xrandr --output Virtual1 --mode 3840x2160 --rate 60
+xrandr -- dpi $X_DPI
+echo "END .xprofile"
