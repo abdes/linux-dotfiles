@@ -1,0 +1,2 @@
+#!/bin/sh
+feh --no-fehbg --bg-fill '/home/abdessattar/.walls/wallpaperflare.com_wallpaper.jpg' 
