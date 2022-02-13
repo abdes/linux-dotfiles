@@ -1,6 +1,5 @@
 .cache/
 .dotfiles/
-.oh-my-zsh/
 .vscode-oss/
 Downloads/
 Desktop/
@@ -22,3 +21,4 @@ tmp/
 .calc_history
 .surf
 .vim_mru_files
+.vim
