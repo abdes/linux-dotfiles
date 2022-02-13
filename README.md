@@ -21,3 +21,32 @@ config checkout
 config config status.showUntrackedFiles no
 ```
 
+To edit dotfiles in `vscode` and have full access to git functionality, use the
+alias defined below:
+
+```shell
+alias dote=GIT_WORK_TREE=~ GIT_DIR=.dotfiles code ~
+```
+
+## Finalize Git settings
+
+```
+GIT_AUTHOR_NAME="<Your Name>"
+GIT_COMMITTER_NAME="$GIT_AUTHOR_NAME"
+git config --global user.name "$GIT_AUTHOR_NAME"
+GIT_AUTHOR_EMAIL="<Your Masked Address>"
+GIT_COMMITTER_EMAIL="$GIT_AUTHOR_EMAIL"
+git config --global user.email "$GIT_AUTHOR_EMAIL"
+```
+
+## Finalize zsh setup
+
+TODO: Install oh-my-zsh and plugins
+
+## Finalize vim setup
+
+TODO: Install additional vim plugins
+
+## Linux packages
+
+TODO: Packages that need to be installed...
