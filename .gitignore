@@ -21,3 +21,4 @@ tmp/
 .git-credentials
 .calc_history
 .config/rofi/launcher/colors.rasi
+.surf
