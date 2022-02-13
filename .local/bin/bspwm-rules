@@ -53,8 +53,8 @@ border='' \
     sticky='' \
     urgent=
 
-emacs() {
-    state=tiled
+vscode() {
+    desktop=^3
 }
 
 firefox() {
@@ -65,39 +65,12 @@ gimp() {
     follow=on
 }
 
-gitk() {
-    state=floating
-    layer=normal
-}
-
 mplayer() {
     state=floating
     layer=normal
 }
 
-pidgin() {
-    desktop=^3
-}
-
-pinentry_gtk_2() {
-    state=floating
-    layer=above
-}
-
-spotify() {
-    desktop=^5
-}
-
-telegram_desktop() {
-    desktop=^3
-}
-
 xcalc() {
-    state=floating
-    layer=normal
-}
-
-xmessage() {
     state=floating
     layer=normal
 }
@@ -107,7 +80,8 @@ chromium() {
 }
 
 surf() {
-    desktop=^2
+    state=floating
+    layer=normal
 }
 
 libreoffice() {
@@ -118,24 +92,6 @@ libreoffice() {
 mpv() {
     state=floating
     layer=normal
-}
-
-stj1() {
-    state=floating
-    layer=above
-    sticky=on
-}
-
-weechat() {
-    desktop=^3
-}
-
-signal() {
-    desktop=^3
-}
-
-remmina() {
-    desktop=^4
 }
 
 jetbrains_idea() {
@@ -163,31 +119,20 @@ zoom() {
     desktop=^1
 }
 
-tigervnc() {
-    desktop=^1
-}
+notify-send "\$1=$(printf '0x%08X' "$id") class=$class instance=$instance"
 
 case $instance.$class in
-*.Chromium) chromium ;;
-*.Emacs) emacs ;;
-*.Gimp) gimp ;;
-*.Gitk) gitk ;;
-*.Pidgin) pidgin ;;
-*.Pinentry-gtk-2) pinentry_gtk_2 ;;
-*.Signal) signal ;;
-*.Spotify) spotify ;;
-*.TelegramDesktop) telegram_desktop ;;
-*.TigerVNC*) tigervnc ;;
-*.XCalc) xcalc ;;
-*.Xmessage) xmessage ;;
+*.code-oss) vscode ;;
 *.[Ff]irefox) firefox ;;
-*.mpv) mpv ;;
-*.zoom) zoom ;;
-*org.remmina.Remmina) remmina ;;
+*.Gimp) gimp ;;
+*.MPlayer) mplayer ;;
+*.?Calc) xcalc ;;
+*.Chromium) chromium ;;
+*.[Ss]urf) surf ;;
 [lL]ibre[oO]ffice*) libreoffice ;;
+*.mpv) mpv ;;
 jetbrains-idea.jetbrains-idea) jetbrains_idea ;;
-stj*.st) stj1 ;;
-weechatw.*) weechat ;;
+*.zoom) zoom ;;
 .)
     case $(exec ps -p "$(exec xdo pid "$id")" -o comm= 2>/dev/null) in
     spotify) spotify ;;
