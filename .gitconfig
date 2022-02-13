@@ -92,11 +92,6 @@ precomposeunicode = false
 # https://git-scm.com/docs/git-update-index#_untracked_cache
 untrackedCache = true
 
-# The following additional configuration can be set to ensure proper
-# handling of end of line, although use of .gitattributes should handle.
-eol = lf
-autocrlf = true
-
 [color]
 
 # Use colors in Git commands that are capable of colored output when
