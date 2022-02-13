@@ -21,3 +21,4 @@ tmp/
 .git-credentials
 .calc_history
 .surf
+.vim_mru_files
