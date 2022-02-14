@@ -81,8 +81,5 @@ feh --bg-fill -z .walls/ &
 # Polybar
 bash ~/.config/polybar/launch.sh --forest &
 
-# Conky clock/date on desktop
-conky -c .config/conky/Style_Retro.conkyrc &
-
 # Keyboard hotkeys
 pgrep -x sxhkd >/dev/null || sxhkd &
