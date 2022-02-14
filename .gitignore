@@ -17,6 +17,7 @@
 .rustup/
 .surf/
 .vim_mru_files
+.vim-bookmarks
 .vim/
 .viminfo
 .vscode-oss/
@@ -29,4 +30,3 @@ Downloads/
 Music/
 Projects/
 tmp/
-.gitignore
