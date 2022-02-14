@@ -24,6 +24,10 @@ ProfileBaseAlias() {
 
     alias 'll=ls -l'
     alias 'lla=ls -al'
+
+    # This should make cava work with gradient even under
+    # tmux
+    alias 'cava=TERM=st-256color cava'
 }
 
 ProfileBaseLocale() {
