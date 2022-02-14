@@ -1,6 +1,8 @@
 .cache/
 .calc_history
+.cargo/
 .dotfiles/
+.Fontmatrix/
 .git-credentials
 .gnupg/
 .lesshst
@@ -10,6 +12,9 @@
 .npm/
 .p10k.zsh
 .pki/
+.pyenv/
+.python_history
+.rustup/
 .surf/
 .vim_mru_files
 .vim/
@@ -24,5 +29,4 @@ Downloads/
 Music/
 Projects/
 tmp/
-.python_history
-.Fontmatrix/
+.gitignore
