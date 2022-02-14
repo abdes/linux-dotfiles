@@ -1,3 +1,4 @@
+.bash_history
 .cache/
 .calc_history
 .cargo/
@@ -16,6 +17,7 @@
 .python_history
 .rustup/
 .surf/
+.tmux/
 .vim_mru_files
 .vim-bookmarks
 .vim/
