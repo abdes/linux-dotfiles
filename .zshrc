@@ -117,5 +117,8 @@ alias vi=nvim
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias dote='GIT_WORK_TREE=~ GIT_DIR=.dotfiles code ~'
 
+# Ruby gems
+export PATH=$(ruby -r rubygems -e 'puts Gem.user_dir')/bin:$PATH
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
