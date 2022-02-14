@@ -72,3 +72,13 @@ ProfileExtDbus() {
         X_DPI \
         X_XCLIENT
 }
+
+ProfileExtPyEnv() {
+    PYENV_ROOT="$HOME/.pyenv"
+    PATH="$PYENV_ROOT/bin:$PATH"
+
+    export \
+        PYENV_ROOT \
+        PATH
+    eval "$(pyenv init --path)"
+}
