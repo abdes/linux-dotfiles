@@ -8,7 +8,7 @@
 #  before .zsh if the shell is also interactive. Since this is inspired by how
 #  `bash` uses `.bash_profile`, I use it to put the common environment settings
 #  that would work for any shell. The actual settings are in a shell neutral
-echo ".zprofile"
+
 {
     ulimit -n "$(($(ulimit -n) * 8))"
     ulimit -s "$(($(ulimit -s) * 8))"

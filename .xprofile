@@ -38,7 +38,5 @@
 X_DPI=$(xdpyinfo | grep dots | awk -F ' ' '{print $2}' | awk -F 'x' '{print $1}')
 export X_DPI
 
-echo ".xprofile"
 xrandr --output Virtual1 --mode 3840x2160 --rate 60
 xrandr -- dpi $X_DPI
-echo "END .xprofile"
