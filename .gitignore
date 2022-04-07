@@ -6,11 +6,13 @@
 .Fontmatrix/
 .git-credentials
 .gnupg/
+.julia/
 .lesshst
 .lyrics/
 .mozilla/
 .mpd/
 .npm/
+.npm-packages/
 .p10k.zsh
 .pki/
 .pyenv/
